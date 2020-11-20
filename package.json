@@ -1,0 +1,35 @@
+{
+  "name": "play-with-nuxt-generate",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "nuxt",
+    "build": "nuxt build",
+    "generate": "(PORT=3000 node api/index.js &) && nuxt generate && pkill -f 'node api/index.js'",
+    "start": "cd dist && serve -l 3000"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/subuta/play-with-nuxt-generate.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/subuta/play-with-nuxt-generate/issues"
+  },
+  "homepage": "https://github.com/subuta/play-with-nuxt-generate#readme",
+  "dependencies": {
+    "@nuxtjs/axios": "^5.12.2",
+    "date-fns": "^2.16.1",
+    "lodash": "^4.17.20",
+    "nuxt": "^2.14.7",
+    "serve": "^11.3.2",
+    "xss": "^1.0.8"
+  },
+  "devDependencies": {
+    "express": "^4.17.1",
+    "json-server": "^0.16.3"
+  }
+}

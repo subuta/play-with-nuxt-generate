@@ -1,0 +1,16 @@
+{
+  "articles": [
+    { "id": 1, "title": "Awesome article of Nuxt.js part.1", "authorId": 1, "createdAt":  "2020-11-21T10:00:00.000Z", "content": "<div><h1>This is dummy heading of part.1</h1><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem cum cupiditate deserunt earum eius ex ipsum laboriosam laudantium optio perferendis possimus praesentium reiciendis repellendus, ut veritatis vero voluptates. Dicta, libero.</p></div>" },
+    { "id": 2, "title": "Awesome article of Nuxt.js part.2", "authorId": 1, "createdAt":  "2020-11-22T10:00:00.000Z", "content": "<div><h1>This is dummy heading of part.2</h1><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem cum cupiditate deserunt earum eius ex ipsum laboriosam laudantium optio perferendis possimus praesentium reiciendis repellendus, ut veritatis vero voluptates. Dicta, libero.</p></div>" },
+    { "id": 3, "title": "Awesome article of Nuxt.js part.3", "authorId": 1, "createdAt":  "2020-11-23T10:00:00.000Z", "content": "<div><script>alert(1)</script> <h1>This is dummy heading of part.3</h1><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem cum cupiditate deserunt earum eius ex ipsum laboriosam laudantium optio perferendis possimus praesentium reiciendis repellendus, ut veritatis vero voluptates. Dicta, libero.</p></div>" },
+    { "id": 4, "title": "Awesome article of Nuxt.js part.4", "authorId": 1, "createdAt":  "2020-11-24T10:00:00.000Z", "content": "<div><h1>This is dummy heading of part.4</h1><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem cum cupiditate deserunt earum eius ex ipsum laboriosam laudantium optio perferendis possimus praesentium reiciendis repellendus, ut veritatis vero voluptates. Dicta, libero.</p></div>" },
+    { "id": 5, "title": "Awesome article of Nuxt.js part.5", "authorId": 1, "createdAt":  "2020-11-25T10:00:00.000Z", "content": "<div><h1>This is dummy heading of part.5</h1><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem cum cupiditate deserunt earum eius ex ipsum laboriosam laudantium optio perferendis possimus praesentium reiciendis repellendus, ut veritatis vero voluptates. Dicta, libero.</p></div>" }
+  ],
+  "authors": [
+    {
+      "id":  1,
+      "name": "subuta",
+      "githubUrl": "https://github.com/subuta"
+    }
+  ]
+}
