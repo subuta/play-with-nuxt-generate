@@ -17,7 +17,6 @@ export default {
   ],
   generate: {
     async routes () {
-      // TODO: preview modeが何なのかを調べる
       // Fetch all articles and generate each page.
       const articleRoutes = await axios.get(`${getOrigin()}/api/articles`).then(({ data: articles }) => {
         return _.map(articles, article => {

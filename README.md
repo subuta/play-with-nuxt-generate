@@ -21,13 +21,13 @@ modules: [
 #### Import and use `getOrigin` helper at "generate.routes" function.
 
 ```jsx
-# at "nuxt.config.js"
+// at "nuxt.config.js"
 import { getOrigin } from './modules/nuxt-generate-helper'
 
 export default {  
   generate: {
     async routes () {
-      # Use getOrigin to get correct origin part of url on each mode(SSG, SSR, CSR).
+      // Use getOrigin to get correct origin part of url on each mode(SSG, SSR, CSR).
       const articleRoutes = await axios.get(`${getOrigin()}/api/articles`)
     }
   }
@@ -37,7 +37,7 @@ export default {
 #### Use `$origin` helper at asyncData
 
 ```jsx
-# Use $origin to get correct origin part of url on each mode(SSG, SSR, CSR).
+// Use $origin to get correct origin part of url on each mode(SSG, SSR, CSR).
 const articles = await $axios.$get(`${$origin()}/api/articles?_expand=author`)
 ```
 
@@ -48,7 +48,7 @@ const articles = await $axios.$get(`${$origin()}/api/articles?_expand=author`)
 
 ### How to develop
 
-```
+```bash
 # Install dependencies
 npm i
 
