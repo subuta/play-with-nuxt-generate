@@ -25,14 +25,22 @@
 </template>
 
 <script>
+  import _ from 'lodash'
   import xss from 'xss'
   import format from 'date-fns/format'
   import parseISO from 'date-fns/parseISO'
 
   export default {
-    async asyncData ({ params, $axios }) {
-      const { id } = params
-      const article = await $axios.$get(`http://localhost:3000/api/articles/${id}?_expand=author`)
+    async asyncData ({ params, error, $axios, $origin }) {
+      const { slug } = params
+
+      // Find article by slug.
+      const article = _.first(await $axios.$get(`${$origin()}/api/articles?slug=${slug}&_expand=author`)) || null
+      if (!article) {
+        // Return 404 if not found.
+        return error({ statusCode: 404, message: 'Article not found' })
+      }
+
       return { article }
     },
 

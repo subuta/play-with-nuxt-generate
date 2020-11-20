@@ -6,8 +6,10 @@
   "scripts": {
     "dev": "nuxt",
     "build": "nuxt build",
-    "generate": "(PORT=3000 node api/index.js &) && nuxt generate && pkill -f 'node api/index.js'",
-    "start": "cd dist && serve -l 3000"
+    "generate": "nuxt generate",
+    "start": "run-p start:*",
+    "start:api": "PORT=3000 nodemon api/index.js",
+    "start:serve": "cd dist && serve -l 4000"
   },
   "repository": {
     "type": "git",
@@ -22,14 +24,17 @@
   "homepage": "https://github.com/subuta/play-with-nuxt-generate#readme",
   "dependencies": {
     "@nuxtjs/axios": "^5.12.2",
+    "cors": "^2.8.5",
     "date-fns": "^2.16.1",
     "lodash": "^4.17.20",
     "nuxt": "^2.14.7",
-    "serve": "^11.3.2",
+    "express": "^4.17.1",
+    "json-server": "^0.16.3",
     "xss": "^1.0.8"
   },
   "devDependencies": {
-    "express": "^4.17.1",
-    "json-server": "^0.16.3"
+    "serve": "^11.3.2",
+    "npm-run-all": "^4.1.5",
+    "nodemon": "^2.0.6"
   }
 }

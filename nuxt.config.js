@@ -1,19 +1,27 @@
 import _ from 'lodash'
 import axios from 'axios'
 
+import { getOrigin } from './modules/nuxt-generate-helper'
+
 export default {
   target: 'static',
   serverMiddleware: {
     '/api': '~/api'
   },
-  plugins: ['plugins/preview.client.js'],
-  modules: ['@nuxtjs/axios'],
+  modules: [
+    '@nuxtjs/axios',
+    '~/modules/nuxt-generate-helper'
+  ],
+  watch: [
+    './db.json'
+  ],
   generate: {
     async routes () {
+      // TODO: preview modeが何なのかを調べる
       // Fetch all articles and generate each page.
-      const articleRoutes = await axios.get('http://localhost:3000/api/articles').then(({ data: articles }) => {
+      const articleRoutes = await axios.get(`${getOrigin()}/api/articles`).then(({ data: articles }) => {
         return _.map(articles, article => {
-          return { route: `/${article.id}` }
+          return { route: `/${article.slug}` }
         })
       })
       return [
@@ -22,6 +30,7 @@ export default {
       ]
     }
   },
+  plugins: ['plugins/preview.client.js'],
   head: {
     script: [],
     meta: [
