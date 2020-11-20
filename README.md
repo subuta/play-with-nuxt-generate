@@ -1,0 +1,1 @@
+# play-with-nuxt-generate
