@@ -3,7 +3,7 @@
 Nuxt.js SSG + serverMiddleware(API routes) example with quite hacky workaround.
 
 At current `v2.14.7` version. `nuxt generate` starts nuxt server on random port. and we cannot have direct access to Nuxt.js instance.
-I added workaround for this issue using custom module. SEE [that module](./modules/nuxt-generate-helper/index.js) for implementation.
+I added workaround for this issue using custom module. SEE [that module](./modules/nuxt-generate-helper/index.js) for check details.
 
 ### How this works.
 
